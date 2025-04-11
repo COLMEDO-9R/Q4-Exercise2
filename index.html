@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Age Verification</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+	<h1>Age Verification</h1>
+
+	<label for="name">Enter Name:</label>
+	<input type="text" id="name" placeholder="name">
+
+	<label for="age">Enter Age:</label>
+	<input type="number" id="age" placeholder="age">
+
+	<div class="buttons">
+		<button type="button" onclick="verifyAge()">Verify</button>
+		<button type="button" onclick="location.reload()">Refresh</button>
+	</div>
+</div>
+
+<script>
+	function verifyAge() {
+		var inputAge = document.getElementById('age').value;
+
+		if (inputAge < 18) {
+			window.alert('Not valid to vote.');
+		} else {
+			window.alert('Welcome!');
+		}
+	}
+</script>
+
+</body>
+</html>
